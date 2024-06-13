@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Playing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .commentInupt{
+           border-left: none;
+           border-right: none;
+           border-top: none;
+           border-bottom: 1px solid gray;
+        }
+        .commentInupt:focus{
+            outline: none;
+        }
+
+        @media screen and (max-width:566px) {
+            .subscriber{
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" style="position: sticky;background-color: white;z-index: 99 !important;top: 0;">
+        <div class="row d-none d-md-flex justify-content-between" style="height: 65px;">
+          <div class="col-md-2 col-lg-3  d-flex ps-4" style="height: 100%;align-items: center;">
+            <div><img src="../img/ytbmenulogo.PNG" style="width: 25px;" alt=""></div>
+            <div class="ps-4"><a href="/">
+                <img src="../img/ytbimg.PNG" style="width: 120px;">
+              </a></div>
+          </div>
+          <div class="col-md-8 col-lg-6 d-none d-lg-flex" style="height: 100%;align-items: center;display: flex;justify-content: end;">
+            <div class="px-4 d-flex justify-content-between"
+              style="border: 1px solid gray;border-radius: 33px;width: 90%;height: 60%;align-content: center;">
+              <input class="searchInput" type="text" style="border: none;" placeholder="Search">
+              <div class="ps-3"
+                style='height: 100%;display: flex;justify-content: center;align-items: center;border-left: 1px solid gray;'>
+                <i class="bi bi-search"></i>
+    
+              </div>
+    
+          </div>
+            <div class="ps-2">
+              <i class="bi bi-mic-fill"
+                style="padding: 10px 13px;background-color: rgb(210, 213, 212);border-radius: 50%;"></i>
+            </div>
+        </div>
+          <div class="col-md-2 col-lg-3 m d-flex justify-content-end" style="height: 100%;align-items: center;">
+            <i class="bi bi-camera-reels pe-4" style="font-size: 20px;"></i>
+            <i class="bi bi-bell pe-4" style="font-size: 20px;"></i>
+            <!-- <i class="bi bi-person-circle pe-4" style="font-size: 30px;"></i> -->
+            <img src="../img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+          </div>
+        </div>
+        <div class="row d-flex d-md-none" style="height: 65px;">
+          <div class="col-6" style="height: 100%;align-content: center;">
+            <a href="/">
+                <img src="../img/ytbimg.PNG" style="width: 120px;">
+              </a>
+          </div>
+          <div class="col-6 d-flex justify-content-end" style="height: 100%;align-items: center;">
+            <i class="bi bi-cast" style="font-size: 17px;margin-right: 15px;"></i>
+        <i class="bi bi-bell" style="font-size: 17px;margin-right: 15px;"></i>
+        <i class="bi bi-search" style="font-size: 17px;margin-right: 5px;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row px-2 px-lg-5">
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="col-12 px-1 px-lg-3">
+                            <video  tabindex="-1" class="img-fluid" controlslist="nodownload" style="border-radius: 10px;" src="../vid/yt5s.com-YOU COVERED ME - Dr. R.A. Vernon .mp4" controls></video>
+                    </div>
+                    <div class="col-12">
+                        <h5 style="font-weight: 700;font-size: 17px;">
+                            YOU COVERED ME - Dr R.A Vernor & "The Word" Church Praise Team, Timothy Reddick Lead
+                        </h5>
+                    </div>
+                    <div class="col-12">
+                        <div class="row justify-content-between">
+                            <div class="col-md-5 col-xxl-6">
+                               <div class="row">
+                                <div class="col-2" style="display: flex;justify-content: center;align-items: center;">
+                                    <img src="../img/profilepic.jpg" style=" width: 40px; border-radius: 50%;" alt="">
+                                </div>
+                                <div class="col-10 col-md-6  px-0 py-0 d-flex justify-content-between">
+                                    <div class="me-3 d-grid">
+                                        <span class="" style="font-weight: 700;font-size: 14px;">Thomas Grill</span>
+                                        <span style="font-size: 12px">
+                                            25.4k subscribers
+                                        </span>
+                                    </div>
+                                    <div style="display: flex;justify-content: center;align-items: center;" class="subscriber">
+                                        <button class="px-4 py-1" style="border-radius: 33px;font-size: 12px;height: 35px;background-color: black;color: white;font-weight: 700;">
+                                            Subscriber
+                                        </button>
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                            <div class="col-md-7 col-xxl-6 d-flex justify-content-lg-between my-2 my-md-0" style="height: 100%;align-self: center;font-size: 12px;">
+                                <div  class="d-flex justify-content-lg-between me-1 me-md-0">
+                                    <div class="px-3" style="padding: 5px;border-top-left-radius: 33px;border-bottom-left-radius: 33px;background-color: black;color: white;">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                        <span>
+                                            5.7k
+                                        </span>
+                                    </div>
+                                    <div class="px-3" style="padding: 5px;border-top-right-radius: 33px;border-bottom-right-radius: 33px;background-color: black;color: white;border-left:1px solid white ;">
+                                        <i class="bi bi-hand-thumbs-down"></i>
+                                    </div>
+                                </div>
+                                <div class="px-3" style="padding: 5px;;background-color: black;color: white;border-radius:33px;">
+                                    <i class="bi bi-reply"></i>
+                                    <span>
+                                       Share
+                                    </span>
+                                </div>
+                                <div class="px-3 ms-2 d-none d-md-inline-flex" style="padding: 5px;;background-color: black;color: white;border-radius:33px;">
+                                    <i class="bi bi-download me-1"></i>
+                                    <span>
+                                       Download
+                                    </span>
+                                </div>
+                                <div class="px-3 ms-2 d-none d-md-inline-flex" style="padding: 5px;;background-color: black;color: white;border-radius:33px;">
+                                    <i class="bi bi-three-dots"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12 mt-2">
+                                <span class="" style="font-weight: 700;font-size: 14px;">158k Views 3month ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                                I'd love to hear your story.  When I wrote this song, I had no idea that it would touch so many lives.  Thank you for sharing "You Covered Me" with the world. Who is still listening to this album? Like this comment if you are, and feel free to share your story.  Also, I started a church called, "THE LIGHT CHURCH". We'd love to raise our followers and stay connected with you. If you would follow our new YouTube Channe <span class="" style="font-weight: 700;font-size: 14px;">...More</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 py-2" style="align-content: center;">
+                        <span style="font-size: 20px;font-weight: 800;">
+                            5 Comments
+                        </span>
+                        <i class="bi bi-filter-left ms-5" style="font-size:20px;font-weight: 900;"></i>
+                        <span style="font-size: 14px;">
+                           Sort by
+                        </span>
+                    </div>
+                    <div class="col-12 my-3">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="../img/coveredpp.jpg" style=" width: 30px; border-radius: 50%;" alt="">
+                            </div>
+                            <div class="col-11">
+                                <input class="commentInupt" type="text" style="width: 100%;" placeholder="Add a comment">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-none d-md-grid">
+                        <div class="row">
+                            <div class="col-1">
+                                <img src="https://yt3.ggpht.com/dOeyihQ4bLa69oOvqqtKIJKXGqALXI7fYys231_UaAiwEgE292QwmFGKtWfrs18ntf_sMxfOyg=s88-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%;" alt="">
+                            </div>
+                            <div class="col-10">
+                                <div class="rows" style="color: gray;">
+                                    <div class="col-12" style="font-size: 14px;">
+                                       <span>@leeritenour 2 months ago</span>
+                                    </div>
+                                    <div class="col-12" style="font-size: 14px;">
+                                        I remember when I was given a 70% scholarship at university I had totally nothing,  I used to walk for 7Km every morning.I could go from 8Am to 7Pm without eating I anything I almost gave up because of challenges and sufferings I endured
+                                    </div>
+                                    <div class="col-12">
+                                        <i class="bi bi-hand-thumbs-up me-2"></i>  <i class="bi bi-hand-thumbs-down me-2"></i> <span>Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-1">
+                                <img src="https://yt3.ggpht.com/ytc/AIdro_kv15G5Bstpek1cwXqWEzUtTD_MjpDY4c1eY366J-Js-wU=s88-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%;" alt="">
+                            </div>
+                            <div class="col-10">
+                                <div class="rows" style="color: gray;">
+                                    <div class="col-12" style="font-size: 14px;">
+                                       <span>@victor 2 weeks ago</span>
+                                    </div>
+                                    <div class="col-12" style="font-size: 14px;">
+                                        I’m beginning to see that God is a really nice person. It always helps when I talk to him more. The more I talk to him the more I understand my identity.  He’s nice enough to correct me without anyone knowing it. He keeps some of my biggest secrets, too. I just really thank God for being not only a Father, but a friend.
+                                    </div>
+                                    <div class="col-12">
+                                        <i class="bi bi-hand-thumbs-up me-2"></i>  <i class="bi bi-hand-thumbs-down me-2"></i> <span>Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-1">
+                                <img src="https://yt3.ggpht.com/pCVtehEim0b1RBDHDOTXLHWj-lh4wyahBPccMhQP8G1oKAUBER70s_qZYkp_JacFK6kSJlUXYA=s88-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%;" alt="">
+                            </div>
+                            <div class="col-10">
+                                <div class="rows" style="color: gray;">
+                                    <div class="col-12" style="font-size: 14px;">
+                                       <span>@ade 2 months ago</span>
+                                    </div>
+                                    <div class="col-12" style="font-size: 14px;">
+                                        2020 still doing justice to my spirit,soul and body. Who else is listening? Hit and comment
+                                    </div>
+                                    <div class="col-12">
+                                        <i class="bi bi-hand-thumbs-up me-2"></i>  <i class="bi bi-hand-thumbs-down me-2"></i> <span>Reply</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-1 d-flex justify-content-end">
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="row">
+                <div class="col-5">
+                    <img alt="" style="width: 100%;border-radius: 7px;" class="img-fluid" src="https://i.ytimg.com/vi/Gv2fzC96Z40/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiLxWPNnFkSkxY_7Mf67RXcyg1xg">
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <span style="font-weight: 700;font-size: 14px;">The underdog: From his Parent's Basement to $25m</span>
+                        </div>
+                        <div class="col-12 px-0" >
+                            <span style="font-size: 12px;font-weight: 500;color: gray;">
+                                Starter
+                            </span>
+                            
+                        </div>
+                        <div class="col-12 px-0">
+                            <span style="font-size: 12px;font-weight: 700;color: gray;">
+                                1m views .4 months ago
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex justify-content-start px-0">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-5">
+                    <img alt="" style="width: 100%;border-radius: 7px;" class="img-fluid" src="https://i.ytimg.com/vi/mBTPvvgRICQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJJtq8T3tjJw1pOZo56CXzDOVkig">
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <span style="font-weight: 700;font-size: 14px;">If i wanted to be a millionaire before 30</span>
+                        </div>
+                        <div class="col-12 px-0" >
+                            <span style="font-size: 12px;font-weight: 500;color: gray;">
+                                Starter
+                            </span>
+                            
+                        </div>
+                        <div class="col-12 px-0">
+                            <span style="font-size: 12px;font-weight: 700;color: gray;">
+                                1m views .4 months ago
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex justify-content-start px-0">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+              <div class="row mt-2">
+                <div class="col-5">
+                    <img alt="" style="width: 100%;border-radius: 7px;" class="img-fluid" src="https://i.ytimg.com/vi/BBAuhqvT_ds/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCz3ooDKBvXCi4hNN826Q7RH5cV9A">
+                </div>
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 px-0">
+                            <span style="font-weight: 700;font-size: 14px;">My honest advice to someone who wants financial freedom</span>
+                        </div>
+                        <div class="col-12 px-0" >
+                            <span style="font-size: 12px;font-weight: 500;color: gray;">
+                                Starter
+                            </span>
+                            
+                        </div>
+                        <div class="col-12 px-0">
+                            <span style="font-size: 12px;font-weight: 700;color: gray;">
+                                1m views .4 months ago
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1 d-flex justify-content-start px-0">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between d-md-none px-3" style="position: sticky;bottom: 0;background-color: white;width: 100%;height: 65px;align-items: center;">
+        <a href="/" style="color: black;">
+            <i class="bi bi-house-door-fill" style="font-size: 25px;"></i>
+        </a>
+        <a href="/content.html">
+            <img src="./img/shorticon.PNG" style="width: 25px;">
+        </a>
+        <i class="bi bi-file-plus"  style="font-size: 25px;"></i>
+        <i class="bi bi-collection-play"  style="font-size: 25px;"></i>
+        <a href="/studio.html">
+          <img src="./img/profilepic.jpg" style="width: 25px;border-radius: 50%;">
+        </a>
+      </div>
+</body>
+</html>
