@@ -10,57 +10,68 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-
   <style>
-    a{
+    a {
       text-decoration: none;
       color: black;
     }
+
     input:focus {
       outline: none
     }
-    .leftNav:hover{
+
+    .leftNav:hover {
       background-color: rgba(210, 213, 212, 0.24);
     }
-    .suggestionBar{
+
+    .suggestionBar {
       background-color: rgba(210, 213, 212, 0.24);
       margin-right: 10px;
       border-radius: 5px;
     }
+
+    .custom-tooltip {
+      background-color: #606060;
+      color:white;
+  /* --bs-tooltip-bg: var(--bs-primary); */
+}
   </style>
 </head>
-<body style="position: relative;">
+
+<body>
   <div class="container-fluid" style="position: sticky;top: 0;background-color: white;z-index: 99 !important;">
     <div class="row d-none d-md-flex justify-content-between" style="height: 65px;">
       <div class="col-md-2 col-lg-3  d-flex ps-4" style="height: 100%;align-items: center;">
-        <div><img src="./img/ytbmenulogo.PNG" style="width: 25px;" alt=""></div>
+        <div><img src="./img/ytbmenulogo.PNG" style="width: 25px; cursor: pointer;" alt=""></div>
         <div class="ps-4">
           <a href="/">
             <img src="./img/ytbimg.PNG" style="width: 120px;">
           </a>
         </div>
       </div>
-      <div class="col-md-8 col-lg-6 d-none d-lg-flex" style="height: 100%;align-items: center;display: flex;justify-content: end;">
+      <div class="col-md-8 col-lg-6 d-none d-lg-flex"
+        style="height: 100%;align-items: center;display: flex;justify-content: end;">
         <div class="px-4 d-flex justify-content-between"
           style="border: 1px solid gray;border-radius: 33px;width: 90%;height: 60%;align-content: center;">
           <input class="searchInput" type="text" style="border: none;" placeholder="Search">
-          <div class="ps-3"
+          <div class="ps-3" 
             style='height: 100%;display: flex;justify-content: center;align-items: center;border-left: 1px solid gray;'>
-            <i class="bi bi-search"></i>
+            <i style="cursor: pointer;" class="bi bi-search" data-toggle="tooltip" data-placement="bottom" title="Search"></i>
 
           </div>
 
         </div>
         <div class="ps-2">
           <i class="bi bi-mic-fill"
-            style="padding: 10px 13px;background-color: rgb(210, 213, 212);border-radius: 50%;"></i>
+            style="padding: 10px 13px;background-color: rgb(210, 213, 212);border-radius: 50%; cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Search with your voice" data-class="custom-tooltip" ></i>
         </div>
       </div>
       <div class="col-md-2 col-lg-3 m d-flex justify-content-end" style="height: 100%;align-items: center;">
-        <i class="bi bi-camera-reels pe-4" style="font-size: 20px;"></i>
-        <i class="bi bi-bell pe-4" style="font-size: 20px;"></i>
+        <i class="bi bi-camera-reels pe-4" style="font-size: 20px; cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Create"></i>
+        <i class="bi bi-bell pe-4" style="font-size: 20px; cursor: pointer;" data-toggle="tooltip" data-placement="bottom" title="Notification"></i>
         <!-- <i class="bi bi-person-circle pe-4" style="font-size: 30px;"></i> -->
-        <a href="/studio.html"><img src="./img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt=""></a>
+        <a href="/studio.html"><img src="./img/profilepic.jpg"
+            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt=""></a>
         <!-- <img src="./img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt=""> -->
       </div>
     </div>
@@ -70,12 +81,17 @@
           <img src="./img/ytbimg.PNG" style="width: 120px;">
         </a>
       </div>
-      <div class="col-6 d-flex justify-content-end" style="height: 100%;align-items: center;">
-        <i class="bi bi-cast" style="font-size: 17px;margin-right: 15px;"></i>
-        <i class="bi bi-bell" style="font-size: 17px;margin-right: 15px;"></i>
-        <i class="bi bi-search" style="font-size: 17px;margin-right: 5px;"></i>
-        
-        <!-- <img src="../img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt=""> -->
+      <div class="col-6 d-flex justify-content-end" style="height: 100%;align-items: center; cursor: pointer;">
+        <i class="bi bi-search" style="font-size: 17px;margin-right: 15px;" data-toggle="tooltip" data-placement="bottom" title="Search"></i>
+        <i class="bi bi-mic-fill" style="font-size: 17px;margin-right: 15px;" data-toggle="tooltip" data-placement="bottom" title="Search with your voice"></i>
+        <i class="bi bi-camera-reels" style="font-size: 17px;margin-right: 15px;" data-toggle="tooltip" data-placement="bottom" title="Create"></i>
+        <i class="bi bi-bell" style="font-size: 17px;margin-right: 15px;" data-toggle="tooltip" data-placement="bottom" title="Notification"></i>
+       <a href="/studio.html">
+        <img src="./img/profilepic.jpg" style="font-size: 17px;margin-right: 5px; width: 30px; border-radius: 50%;" alt="">
+       </a>
+        <!-- <i class="bi bi-search" style="font-size: 17px;margin-right: 5px;"></i> -->
+
+
       </div>
     </div>
   </div>
@@ -85,7 +101,7 @@
     <div class="row">
       <div class="col-1 d-none d-md-flex">
         <div class="row">
-          <div class="col-9">
+          <div class="col-9" style="cursor: pointer;">
             <div class="d-flex justify-content-center py-3 leftNav">
               <div>
                 <div class="d-flex justify-content-center py-3">
@@ -138,22 +154,23 @@
           <div class="col-3">
           </div>
         </div>
-        
+
       </div>
       <div class="col-12 col-md-11" style="height: 95vh;overflow-y: scroll;">
         <div class="row">
-          <div class="col-12 d-none d-md-flex px-0" style="position: relative;">
+          <div class="col-12 d-none d-md-flex px-0" style="position: relative; cursor: pointer;">
             <div style="">
               <span class="py-1 px-4 suggestionBar bg-dark text-light">All</span>
-              <span class="py-1 px-4 suggestionBar" >Nollywood</span>
-              <span class="py-1 px-4 suggestionBar" >sewing</span>
-              <span class="py-1 px-4 suggestionBar" >Music</span>
-              <span class="py-1 px-4 suggestionBar" > Dramedy</span>
-              <span class="py-1 px-4 suggestionBar" >Action</span>
-              <span class="py-1 px-4 suggestionBar d-none d-lg-inline-flex" >Game Shows</span>
-              <span class="py-1 px-4 suggestionBar d-none d-lg-inline-flex" >Odunlade Adekola Movie's</span>
+              <span class="py-1 px-4 suggestionBar">Nollywood</span>
+              <span class="py-1 px-4 suggestionBar">sewing</span>
+              <span class="py-1 px-4 suggestionBar">Music</span>
+              <span class="py-1 px-4 suggestionBar"> Dramedy</span>
+              <span class="py-1 px-4 suggestionBar">Action</span>
+              <span class="py-1 px-4 suggestionBar d-none d-lg-inline-flex">Game Shows</span>
+              <span class="py-1 px-4 suggestionBar d-none d-lg-inline-flex">Odunlade Adekola Movie's</span>
             </div>
-            <div class="pe-4" style="position: absolute; top: 0;width: 100%; display: flex;justify-content:end;height: 100%;align-items: center;">
+            <div class="pe-4"
+              style="position: absolute; top: 0;width: 100%; display: flex;justify-content:end;height: 100%;align-items: center;">
               <i class="bi bi-arrow-right-circle" style="font-size: 22px;"></i>
             </div>
           </div>
@@ -162,8 +179,10 @@
               <div class="col-md-6 col-lg-4 mt-lg-5">
                 <div class="row">
                   <div class="col-12" style="position: relative;">
-                    
-                    <img src="https://lh6.googleusercontent.com/proxy/duB1bPHk27pZsZL5WPmhkZmzIntuIv0ut-kqc3A8jRW47i2aAui766bAD1u_IoObNR6wiIz-0tbG4bX6AqjPpq_1MXpHgZrIDkrDLeZmbpalmZUvfku7kIax-UUUYZnuBw=w1152-h603-s-nd" alt="" style="border-radius: 10px;" class="img-fluid">
+
+                    <img
+                      src="https://lh6.googleusercontent.com/proxy/duB1bPHk27pZsZL5WPmhkZmzIntuIv0ut-kqc3A8jRW47i2aAui766bAD1u_IoObNR6wiIz-0tbG4bX6AqjPpq_1MXpHgZrIDkrDLeZmbpalmZUvfku7kIax-UUUYZnuBw=w1152-h603-s-nd"
+                      alt="" style="border-radius: 10px;" class="img-fluid">
                     <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px;
                     padding-right: 5px; padding-bottom: 5px; "><i class="bi bi-box-arrow-up-right"></i></div>
                   </div>
@@ -175,18 +194,20 @@
                       <div class="col-11 ps-3">
                         <div class="row">
                           <div class="col-12" style="font-size: 16px;  font-weight: 500; ">
-                            Automatic speech recognition 
+                            Automatic speech recognition
                           </div>
                           <div class="col-12" style="font-size: 14px; color: #606060;">
-                            <span>Return text transcription in real time for short-form or long-form audio. Try it now.</span>
-                              
+                            <span>Return text transcription in real time for short-form or long-form audio. Try it
+                              now.</span>
+
                           </div>
                           <div class="col-12" style="font-size: 14px;">
-                            <span style="font-weight: 700;">Sponsored </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>Gooogle Cloud</span>
+                            <span style="font-weight: 700;">Sponsored </span><span
+                              style="font-weight: 900;padding-bottom: 20px;">. </span><span>Gooogle Cloud</span>
                           </div>
                         </div>
                       </div>
-                      <div class="col-1">
+                      <div cl Jass="col-1">
                         <i class="bi bi-three-dots-vertical"></i>
                       </div>
                     </div>
@@ -196,298 +217,353 @@
 
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/Z7r67v8wGzU/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC5ASTNL3sdwV3pv7Iqgvdf4oLPHg" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">3:05:40</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <!-- <div class="col-1">
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/Z7r67v8wGzU/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC5ASTNL3sdwV3pv7Iqgvdf4oLPHg"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        3:05:40</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <!-- <div class="col-1">
                         <img src="./img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
                       </div> -->
-                      <div class="col-11 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-size: 16px; font-weight: 600;">
-                            Mix - Biola Adebayo Ent. 
-                          </div>
-                          <div class="col-12" style="font-size: 12px; color: #606060;">
-                            <span>More from this channel for you</span>
+                        <div class="col-11 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-size: 16px; font-weight: 600;">
+                              Mix - Biola Adebayo Ent.
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>More from this channel for you</span>
                               <!-- <i class="bi bi-patch-check-fill"></i> -->
-                          </div>
-                          <!-- <div class="col-12" style="font-size: 14px;">
+                            </div>
+                            <!-- <div class="col-12" style="font-size: 14px;">
                             <span>25k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>14Hours ago</span>
                           </div> -->
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
 
 
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/pnNP_fVjB9Y/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAQwg_rzsEQdICOSZD7YvYvfV4i3A" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">3:05</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <!-- <div class="col-1">
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/pnNP_fVjB9Y/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAQwg_rzsEQdICOSZD7YvYvfV4i3A"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        3:05</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <!-- <div class="col-1">
                         <img src="./img/profilepic.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
                       </div> -->
-                      <div class="col-11 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-size: 13px;  font-weight: 600;font-family: Arial, Helvetica, sans-serif;">
-                          Mix - YOU COVERED ME - Dr. R.A. Vernon & "The Word" Church Praise Team, Timothy Reddick 
-                          </div>
-                          <div class="col-12" style="font-size: 11px; color: #606060;">
-                            <span>Timothy Reddick, Chandler Moore, Mark T. Jackson, and more</span>
+                        <div class="col-11 ps-3">
+                          <div class="row">
+                            <div class="col-12"
+                              style="font-size: 13px;  font-weight: 600;font-family: Arial, Helvetica, sans-serif;">
+                              Mix - YOU COVERED ME - Dr. R.A. Vernon & "The Word" Church Praise Team, Timothy Reddick
+                            </div>
+                            <div class="col-12" style="font-size: 11px; color: #606060;">
+                              <span>Timothy Reddick, Chandler Moore, Mark T. Jackson, and more</span>
                               <!-- <i class="bi bi-patch-check-fill"></i> -->
-                          </div>
-                          <!-- <div class="col-12" style="font-size: 14px;">
+                            </div>
+                            <!-- <div class="col-12" style="font-size: 14px;">
                             <span>25k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>14Hours ago</span>
                           </div> -->
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/WXc9wp3Y-M4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHhfRG_tHz-i2c2Vl9xMycEudBUA" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">3:05:40</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="https://yt3.ggpht.com/mu5eT4ZkcgIkcJW3C7qoAfpjODa2w-qLmp9ZkckqU6UECtZioJXRQaf2Mtk38CxA4tLuM5E_Rg=s68-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-weight: 600; font-size: 14px;">
-                            Episode 49( Abuja edition ) pop the balloon to eject least attractive guy...
-                          </div>
-                          <div class="col-12"  style="font-size: 12px; color: #606060;">
-                            <span>Nons-Miraj</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/WXc9wp3Y-M4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDHhfRG_tHz-i2c2Vl9xMycEudBUA"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        3:05:40</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img
+                            src="https://yt3.ggpht.com/mu5eT4ZkcgIkcJW3C7qoAfpjODa2w-qLmp9ZkckqU6UECtZioJXRQaf2Mtk38CxA4tLuM5E_Rg=s68-c-k-c0x00ffffff-no-rj"
+                            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-weight: 600; font-size: 14px;">
+                              Episode 49( Abuja edition ) pop the balloon to eject least attractive guy...
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>Nons-Miraj</span>
                               <i class="bi bi-patch-check-fill"></i>
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>677k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>1 month ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>677k views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>1 month ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/MzneFbBjtR0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBW2tC-co58MzdCXjjAJq5PP27MkA" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">1:09:11</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="https://yt3.ggpht.com/PSlVnw8neCX16XZu_vlFI4cvEQXBMHRxfwnc9r-d2yKBbi7S1kqMSVG_6aHNmkRkNHGo6CUFeg=s68-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                        
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-weight: 600; font-size: 14px;">
-                            AGBOLUAJE (RELOADED) - Latest 2024 Yoruba Movie Drama Starring; 
-                          </div>
-                          <div class="col-12">
-                            <span>Okiki PremiumTV</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/MzneFbBjtR0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBW2tC-co58MzdCXjjAJq5PP27MkA"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        1:09:11</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img
+                            src="https://yt3.ggpht.com/PSlVnw8neCX16XZu_vlFI4cvEQXBMHRxfwnc9r-d2yKBbi7S1kqMSVG_6aHNmkRkNHGo6CUFeg=s68-c-k-c0x00ffffff-no-rj"
+                            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-weight: 600; font-size: 14px;">
+                              AGBOLUAJE (RELOADED) - Latest 2024 Yoruba Movie Drama Starring;
+                            </div>
+                            <div class="col-12">
+                              <span>Okiki PremiumTV</span>
                               <i class="bi bi-patch-check-fill"></i>
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>25k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>14Hours ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>25k views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>14Hours ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/4kfATNZjAe0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAV8n3Hxf6s_3e5_PZQbDuCIcAag" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">21:48</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="https://yt3.ggpht.com/ytc/AIdro_mxlz3jT261pHfjWm2RiAfjGJGPEE1pU78FIT3x_F9OoA=s68-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-weight: 600; font-size: 14px;">
-                            HOW TO ATTACHED AN EXPOSED ZIPPER TO A BALL GOWN / STEP 
-                          </div>
-                          <div class="col-12" style="font-size: 12px; color: #606060;">
-                            <span>Sew Kiddies With Ajulam</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/4kfATNZjAe0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDAV8n3Hxf6s_3e5_PZQbDuCIcAag"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        21:48</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img
+                            src="https://yt3.ggpht.com/ytc/AIdro_mxlz3jT261pHfjWm2RiAfjGJGPEE1pU78FIT3x_F9OoA=s68-c-k-c0x00ffffff-no-rj"
+                            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-weight: 600; font-size: 14px;">
+                              HOW TO ATTACHED AN EXPOSED ZIPPER TO A BALL GOWN / STEP
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>Sew Kiddies With Ajulam</span>
                               <!-- <i class="bi bi-patch-check-fill"></i> -->
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>153k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>3Hours ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>153k views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>3Hours ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/_mlY7UgfmiU/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIDwoODAP&rs=AOn4CLDUMJecvHzHpB2bDTWPydVqT-Lhwg" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">12:09</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="https://yt3.ggpht.com/5SxBzPixh3zjvh266cPmTkK_xp_hiusfsRormfD-_5N1MBB5xzB0o7qdTxiSKrDuY_fyGDe4=s68-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-weight: 600; font-size: 14px;">
-                            #Masoyinbo Episode Twelve : Exciting Game Show Teaching Yoruba Language...
-                          </div>
-                          <div class="col-12"  style="font-size: 12px; color: #606060;">
-                            <span>EAYoruba</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/_mlY7UgfmiU/hq720.jpg?sqp=-oaymwE2CNAFEJQDSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIDwoODAP&rs=AOn4CLDUMJecvHzHpB2bDTWPydVqT-Lhwg"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        12:09</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img
+                            src="https://yt3.ggpht.com/5SxBzPixh3zjvh266cPmTkK_xp_hiusfsRormfD-_5N1MBB5xzB0o7qdTxiSKrDuY_fyGDe4=s68-c-k-c0x00ffffff-no-rj"
+                            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-weight: 600; font-size: 14px;">
+                              #Masoyinbo Episode Twelve : Exciting Game Show Teaching Yoruba Language...
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>EAYoruba</span>
                               <i class="bi bi-patch-check-fill"></i>
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>66k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>4 weeks ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>66k views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>4 weeks ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/8dKDGvDprCM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkpPClSDKDT9j4sDV5mk1wDGmIYw" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">3:10</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="./img/DIY.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-size: 14px;  font-weight: 600;">
-                            Fascinating way to sew easy v-neck .technique for beginners 
-                          </div>
-                          <div class="col-12"  style="font-size: 12px; color: #606060;">
-                            <span>Sammy</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/8dKDGvDprCM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkpPClSDKDT9j4sDV5mk1wDGmIYw"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        3:10</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img src="./img/DIY.jpg" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-size: 14px;  font-weight: 600;">
+                              Fascinating way to sew easy v-neck .technique for beginners
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>Sammy</span>
                               <i class="bi bi-patch-check-fill"></i>
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>3M views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>1 year ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>3M views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>1 year ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
               <div class="col-md-6 col-lg-4 mt-5">
                 <a href="/playvideo.html">
-                <div class="row">
-                  <div class="col-12" style="position: relative;">
-                    <img src="https://i.ytimg.com/vi/1pTXjZlMG7E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAccWSMsMc8j7d0afsOwYiUJYA07g" alt="" style="border-radius: 10px;" class="img-fluid">
-                    <div style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">15:40</div>
-                  </div>
-                  <div class="col-12 mt-2">
-                    <div class="row">
-                      <div class="col-1">
-                        <img src="https://yt3.ggpht.com/vqqDfQqk4DNy8mW8Yva0dzu92w4lpIhqeVCxjCK3x3bUBFBxii8QYjbEkklS-tT5IvI68vtmrg=s68-c-k-c0x00ffffff-no-rj" style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
-                      </div>
-                      <div class="col-10 ps-3">
-                        <div class="row">
-                          <div class="col-12" style="font-weight: 600; font-size: 14px;">
-                            10 QUICK AND EASY WAYS TO STYLE 1 HEADSCARF | HEADWRAP |... 
-                          </div>
-                          <div class="col-12"  style="font-size: 12px; color: #606060;">
-                            <span>Glory Okings</span>
+                  <div class="row">
+                    <div class="col-12" style="position: relative;">
+                      <img
+                        src="https://i.ytimg.com/vi/1pTXjZlMG7E/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAccWSMsMc8j7d0afsOwYiUJYA07g"
+                        alt="" style="border-radius: 10px;" class="img-fluid">
+                      <div
+                        style="position: absolute; bottom: 0; right: 20px; margin-bottom:8px ; background-color: black; color: white; font-size: 12px; padding-left: 5px; padding-right: 5px; border-radius: 5px;">
+                        15:40</div>
+                    </div>
+                    <div class="col-12 mt-2">
+                      <div class="row">
+                        <div class="col-1">
+                          <img
+                            src="https://yt3.ggpht.com/vqqDfQqk4DNy8mW8Yva0dzu92w4lpIhqeVCxjCK3x3bUBFBxii8QYjbEkklS-tT5IvI68vtmrg=s68-c-k-c0x00ffffff-no-rj"
+                            style=" width: 30px; border-radius: 50%; margin-right: 20px;" alt="">
+                        </div>
+                        <div class="col-10 ps-3">
+                          <div class="row">
+                            <div class="col-12" style="font-weight: 600; font-size: 14px;">
+                              10 QUICK AND EASY WAYS TO STYLE 1 HEADSCARF | HEADWRAP |...
+                            </div>
+                            <div class="col-12" style="font-size: 12px; color: #606060;">
+                              <span>Glory Okings</span>
                               <i class="bi bi-patch-check-fill"></i>
-                          </div>
-                          <div class="col-12" style="font-size: 14px;">
-                            <span>387k views </span><span style="font-weight: 900;padding-bottom: 20px;">. </span><span>9 months ago</span>
+                            </div>
+                            <div class="col-12" style="font-size: 14px;">
+                              <span>387k views </span><span style="font-weight: 900;padding-bottom: 20px;">.
+                              </span><span>9 months ago</span>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="col-1">
-                        <i class="bi bi-three-dots-vertical"></i>
+                        <div class="col-1">
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="d-flex justify-content-between d-md-none" style="position: sticky;bottom: 0;background-color: white;width: 100%;height: 65px;align-items: center;">
+    <div class="d-flex justify-content-between d-md-none"
+      style="position: sticky;bottom: 0;background-color: white;width: 100%;height: 65px;align-items: center;">
       <i class="bi bi-house-door-fill" style="font-size: 25px;"></i>
       <a href="/content.html">
         <img src="./img/shorticon.PNG" style="width: 25px;">
       </a>
-      <i class="bi bi-file-plus"  style="font-size: 25px;"></i>
-      <i class="bi bi-collection-play"  style="font-size: 25px;"></i>
+      <i class="bi bi-file-plus" style="font-size: 25px;"></i>
+      <a href="/subscription.html"><i class="bi bi-collection-play" style="font-size: 25px;"></i></a>
+      <!-- <i class="bi bi-collection-play"  style="font-size: 25px;"></i> -->
       <a href="/studio.html">
         <img src="./img/profilepic.jpg" style="width: 25px;border-radius: 50%;">
       </a>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  
 </body>
 
 </html>
